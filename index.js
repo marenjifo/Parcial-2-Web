@@ -13,6 +13,10 @@ app.use(express.static('public'));
 app.engine('handlebars',motorRender());
 app.set('view engine','handlebars');
 
+function archivoEscrito(){
+    console.log("Se escribio el dato");
+}
+
 
 var contexto = [
     
@@ -38,6 +42,9 @@ var contexto = [
 
 //Ruta inicial
 app.get('/inicio', function(req, res) {
+
+
+    fs.appendFileSync('datos.txt','Pagina visitada: Inicio - Fecha:' +new Date()+'\n','utf8',{'flags':'a+'});
     
     res.render('molde',contexto[0]);
     
@@ -45,6 +52,8 @@ app.get('/inicio', function(req, res) {
 
 //Ruta inicial
 app.get('/sobre', function(req, res) {
+
+    fs.appendFileSync('datos.txt','Pagina visitada: Sobre - Fecha:' +new Date()+'\n','utf8',{'flags':'a+'});
     
     res.render('molde',contexto[1]);
     
@@ -52,6 +61,8 @@ app.get('/sobre', function(req, res) {
 
 //Ruta inicial
 app.get('/contacto', function(req, res) {
+
+    fs.appendFileSync('datos.txt','Pagina visitada: Contacto - Fecha:' +new Date()+'\n','utf8',{'flags':'a+'});
     
     res.render('molde',contexto[2]);
     
