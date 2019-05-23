@@ -14,11 +14,48 @@ app.engine('handlebars',motorRender());
 app.set('view engine','handlebars');
 
 
-//Ruta inicial
-app.get('/', function(req, res) {
-    res.send('<h1>Hola Mundo!</h1>');
+var contexto = [
     
- });
+    {
+        titulo: 'Inicio',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
+        layout: false
+    },
+    
+    {
+        titulo: 'Sobre Nosotros',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
+        layout: false
+    },
+    
+    {
+        titulo: 'Contacto',
+        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
+        layout: false
+    }
+    
+]
+
+//Ruta inicial
+app.get('/inicio', function(req, res) {
+    
+    res.render('molde',contexto[0]);
+    
+});
+
+//Ruta inicial
+app.get('/sobre', function(req, res) {
+    
+    res.render('molde',contexto[1]);
+    
+});
+
+//Ruta inicial
+app.get('/contacto', function(req, res) {
+    
+    res.render('molde',contexto[2]);
+    
+});
 
 //Servidor creado
 app.listen(3000, function() {
