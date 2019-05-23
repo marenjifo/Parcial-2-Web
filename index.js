@@ -75,10 +75,29 @@ app.get('/contacto', function(req, res) {
 
 //Ruta de administrador
 app.get('/admin', function(req, res) {
+
+    fs.readFile('datos.txt','utf8',function(err,data){
+
+        if(err) throw err;
+        var lines = data.split('\n');
+        //var items=lines[0].split(' ');
+        //var nombre=items[2];
+        
+
+        lines.forEach(function(line){
+            var items=line.split(' ');
+            var nombre=items[2];
+            console.log(nombre);
+           
+
+        });
+    }); 
     
     res.render('admin',contexto[3]);
     
 });
+
+
 
 //Servidor creado
 app.listen(3000, function() {
