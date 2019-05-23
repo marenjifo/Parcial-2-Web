@@ -36,6 +36,11 @@ var contexto = [
         titulo: 'Contacto',
         descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
         layout: false
+    },
+
+    {
+        titulo: 'Administrador',
+        layout: false
     }
     
 ]
@@ -50,7 +55,7 @@ app.get('/inicio', function(req, res) {
     
 });
 
-//Ruta inicial
+//Ruta sobre nosotros
 app.get('/sobre', function(req, res) {
 
     fs.appendFileSync('datos.txt','Pagina visitada: Sobre - Fecha:' +new Date()+'\n','utf8',{'flags':'a+'});
@@ -59,12 +64,19 @@ app.get('/sobre', function(req, res) {
     
 });
 
-//Ruta inicial
+//Ruta de contacto
 app.get('/contacto', function(req, res) {
 
     fs.appendFileSync('datos.txt','Pagina visitada: Contacto - Fecha:' +new Date()+'\n','utf8',{'flags':'a+'});
     
     res.render('molde',contexto[2]);
+    
+});
+
+//Ruta de administrador
+app.get('/admin', function(req, res) {
+    
+    res.render('admin',contexto[3]);
     
 });
 
