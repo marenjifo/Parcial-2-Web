@@ -1,4 +1,4 @@
-//Grupo: Maria AlejandrA Renjifo y Juan Sebastian Gil
+//Grupo: Maria Alejandra Renjifo y Juan Sebastian Gil
 
 //Importar librerias
 var express = require('express');
@@ -22,19 +22,19 @@ var contexto = [
     
     {
         titulo: 'Inicio',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
+        descripcion: 'La Universidad Icesi forma profesionales en 28 programas de pregrado, 1 doctorado, 24 maestrías, 21 especializaciones médico-quirúrgicas y 15 especializaciones, todos ellos aprobados por el Ministerio de Educación Nacional. Además, gracias al estrecho vínculo con las empresas, se diseñan diplomados y programas a la medida de cada organización que satisfacen sus necesidades de actualización, ofreciéndole también asesoría y consultoría.',
         layout: false
     },
     
     {
         titulo: 'Sobre Nosotros',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
+        descripcion: 'El campus de 141.334 metros cuadrados está compuesto por 18 edificios con aulas dotadas con equipos de última tecnología y aire acondicionado para el óptimo desarrollo de las actividades académicas y de investigación. Entre ellos, el Edificio L, dotado con Laboratorios claves para las carreras de Medicina, Química, Biología, Ingeniería Bioquímica y Química Farmacéutica. El último, es el Edificio E, de cinco pisos con 4.300 m2, ubicado al lado del Edificio D y Bienestar Universitario, que cuenta con 33 salones de clases para 40 alumnos por aula; un auditorio para 77 personas, una sala de audiencias ubicada en el segundo piso; dos aulas especiales en primer piso para 43 personas cada una y ocho aulas grupales.',
         layout: false
     },
     
     {
         titulo: 'Contacto',
-        descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend tempus lectus, non venenatis arcu dapibus sit amet. Vestibulum at erat nisl. Vivamus ac quam dui. In hac habitasse platea dictumst. Curabitur vel enim ipsum. Maecenas vel eros quis mi ornare rhoncus eu sed augue. Fusce eget ante placerat, tempus erat vel, malesuada elit. Sed interdum sapien id diam mollis lobortis. Pellentesque non est at sem accumsan maximus vitae quis enim.',
+        descripcion: 'En el 2015, el Ministerio de Educación Nacional otorgó la renovación de la Acreditación Institucional de Alta Calidad, hasta el 2021, “recibimos con orgullo esta renovación de la Acreditación Institucional de Alta Calidad, pues es un reconocimiento al compromiso permanente de Icesi con la región y el país, de mantener altos estándares de calidad en el desarrollo de las funciones de formación, investigación y extensión social, así como en las labores de apoyo administrativo”, comenta Francisco Piedrahita, rector de la Universidad Icesi.',
         layout: false
     },
 

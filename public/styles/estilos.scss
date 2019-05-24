@@ -28,7 +28,7 @@ body{
 
 
 .navegacion{
-    font-family: 'Montserrat', sans-serif;;
+    font-family: 'Montserrat', sans-serif;
     width: 100%;
     height: 4em;
     display: flex;
@@ -37,9 +37,18 @@ body{
     align-items: center;
 
     &__enlace{
+        
         text-decoration: none;
         color: white;
         padding: 20px;
+        opacity: .5;
+        transition: .5s;
+
+        &:hover{
+             
+            opacity: 1;
+            border-bottom: 2px solid #ffffff;
+        }
     }
 }
 
@@ -72,6 +81,8 @@ body{
 }
 
 .tabla{
+
+    font-family: 'Montserrat', sans-serif;
     background-color: rgb(112, 112, 112);
     //border: solid 2px #ffffff;
     &__celda{
