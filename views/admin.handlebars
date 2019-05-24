@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{titulo}}</title>
+    <link rel="stylesheet" href="/styles/estilos.css">
 </head>
 <body>
 
+     <nav class="navegacion">
+    <a href="/inicio" class="navegacion__enlace">Inicio</a>
+    <a href="/sobre" class="navegacion__enlace">Sobre Nosotros</a>
+    <a href="/contacto" class="navegacion__enlace">Contacto</a>
+    <a href="/admin" class="navegacion__enlace">Administrador</a>
+    </nav>
+
 <table class="tabla">
-<tbody>
 <tr class="tabla__fila">
 <td  class="tabla__celda">Pagina</td>
 <td class="tabla__celda">Visitas</td>
@@ -26,7 +33,6 @@
 <td class="tabla__celda">Contacto</td>
 <td class="tabla__celda">{{contContacto}}</td>
 </tr>
-</tbody>
 </table>
     
 </body>
