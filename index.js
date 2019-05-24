@@ -38,10 +38,6 @@ var contexto = [
         layout: false
     },
 
-    {
-        titulo: 'Administrador',
-        layout: false
-    }
     
 ]
 
@@ -76,24 +72,58 @@ app.get('/contacto', function(req, res) {
 //Ruta de administrador
 app.get('/admin', function(req, res) {
 
+    var items;
+    var nombres = [];
+    var contInicio=0;
+    var contSobre=0;
+    var contContacto=0;
+
     fs.readFile('datos.txt','utf8',function(err,data){
 
         if(err) throw err;
         var lines = data.split('\n');
-        //var items=lines[0].split(' ');
-        //var nombre=items[2];
         
-
         lines.forEach(function(line){
-            var items=line.split(' ');
-            var nombre=items[2];
-            console.log(nombre);
-           
+            items=line.split(' ');
+            nombres.push(items[2]);
 
         });
+
+        console.log(nombres);
+
+        nombres.forEach(function(nom){
+
+            if(nom == "Inicio"){
+                contInicio++;
+            }
+
+            if(nom == "Sobre"){
+                contSobre++;
+            }
+
+            if(nom == "Contacto"){
+                contContacto++;
+            }
+            
+        
+        });
+
+        console.log("Inicio: "+contInicio+" Sobre: "+contSobre+" Contacto: "+contContacto);
+
+        var contextoAdmin={
+            layout: false,
+            titulo: 'Administrador',
+            contInicio: contInicio,
+            contSobre: contSobre,
+            contContacto: contContacto
+
+        };
+
+        res.render('admin',contextoAdmin);
+
     }); 
     
-    res.render('admin',contexto[3]);
+   
     
 });
 
